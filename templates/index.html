@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Flask</title>
+  
+  <link rel="stylesheet" href="{{ url_for('static',    filename='css/style.css') }}">
+</head>
+<body>
+  <p id="model-input">{{ modelInput }}</p>
+  <p id="video-input">{{ videoInput }}</p>
+  <div id="app" class="container">
+    <a href="/" style="text-decoration: none;">
+    <h1 class="title">METABOW POSTURE</h1></a>
+    <div class="columns">
+      <div class="left-column">
+        <label class="label">Video</label>
+        {% if filename %}
+        <div class="image-border">
+          <!-- <img width="500" height="600" alt="n" src="{{ url_for('video_feed')}}">
+           -->
+           <img src="{{ url_for('video_feed') }}" width="640">
+           <img id="image-hide" src="{{ url_for('video_feed_detection') }}">
+          
+           
+        </div>
+        {% endif %}
+
+        <!-- <img src="{{ url_for('video_feed') }}"> -->
+      </div>
+      <div class="right-column">
+        
+        <form action="{{ url_for('send') }}" method="post" name="input-form" class="input-form" enctype="multipart/form-data">
+          <div class="upload-button-label">Upload Video File</div>
+          <!-- <div class="upload-button-container">
+            <label for="file-upload" class=" button custom-file-upload">
+              <img title="upload-icon" alt="upload-icon" src="../static/icons/upload.png" class='icon' >Choose file
+            </label>
+            <input id="file" type="file" accept=""/>
+          </div> -->
+          
+          <div class="upload-button-container">
+            <input class="button custom-file-upload" type="file" name="file" autocomplete="off" accept="video/*">
+          </div>
+
+          <div class="field">
+            <label class="label">Select Video Source</label>
+            <div class="control">
+              <label class="radio">
+                <input type="radio" name="videoinput" value="file-input" id="file-input" checked>
+                File Upoad
+              </label>
+              &nbsp;
+              <label class="radio">
+                <input type="radio" name="videoinput" value="web-cam" id="web-cam">
+                Web Cam
+              </label>
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">Select the Model</label>
+            <div class="control">
+              <label class="radio">
+                <input type="radio" name="model" value="first" id="first" checked>
+                Basic Posture
+              </label>
+              &nbsp;
+              <label class="radio">
+                <input type="radio" name="model" value="second" id="second">
+                Comprehensive Posture
+              </label>
+            </div>
+          </div>
+          <div class="field">
+            <label class="label">Enter log File Name</label>
+            <div class="log-file-name">
+              <label class="log-file-nam">
+                <input type="text" name="log-file-name" id="file-inputlog-file-name" placeholder="No Special characters" required>
+              </label>
+            </div>
+          </div>
+          
+
+          
+
+          <div class="submit">
+            <label for="file-submit" class="button custom-file-submit">
+              <img title="submit-icon" alt="submit-icon" src="../static/icons/submit.png" class='icon' >Upload
+            </label>
+            <input id="file-submit" type="submit"/>
+            {% if filename %}
+            <a href="{{ url_for('download') }}" >
+            <label class="button download-button" >
+              <img title="download-icon" alt="download-icon" src="../static/icons/download.png" class='icon' >Download
+            </label>
+            </a>
+            {% endif %}
+          </div>
+          
+        </form>
+        <label class="label" id="resultLine">Results of FIRST Model</label>
+
+        <div class="result-table">
+          
+          <div class="box">Angle</div>
+          <div class="box">Measure</div>
+          <div class="box">Angle</div>
+          <div class="box">Measure</div> 
+          <!-- Table Row -->
+          <div class="row r1">
+            <div class="box c1">LEFT ELBOW</div>
+            <div class="box c2">23</div>
+          </div>
+
+          <div class="row r2">
+            <div class="box c1">LEFT SHOULDER</div>
+            <div class="box c2">22</div>
+          </div>
+
+          <div class="row r3">
+            <div class="box c1">RIGHT SHOULDER</div>
+            <div class="box c2">100</div>
+          </div>
+
+          <div class="row r4">
+            <div class="box c1">RIGHT ELBOW</div>
+            <div class="box c2">540</div>
+          </div>
+
+          <div class="row r5">
+            <div class="box c1">LEFT SHOULDER HIP</div>
+            <div class="box c2">100</div>
+          </div>
+
+          <div class="row r6">
+            <div class="box c1">RIGHT SHOULDER HIP</div>
+            <div class="box c2">300</div>
+          </div>
+
+          <div class="row r7">
+            <div class="box c1">LEFT HAND FACE</div>
+            <div class="box c2">300</div>
+          </div>
+          <div class="row r8">
+            <div class="box c1">RIGHT HAND FACE</div>
+            <div class="box c2">300</div>
+          </div>
+          <div class="row r9">
+            <div class="box c1">LEFT WRIST INDEX</div>
+            <div class="box c2">300</div>
+          </div>
+          <div class="row r10">
+            <div class="box c1">LEFT WRIST PINKY</div>
+            <div class="box c2">300</div>
+          </div>
+          <div class="row r11">
+            <div class="box c1">LEFT WRIST THUMB</div>
+            <div class="box c2">300</div>
+          </div>
+        </div>
+      </div>
+        
+    </div>
+  </div>
+  <script src="{{ url_for('static', filename='javascript/static.js') }}"></script>
+</body>
+
+</html>
