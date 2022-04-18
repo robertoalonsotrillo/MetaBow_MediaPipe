@@ -1,0 +1,186 @@
+html, body {
+  background-color: #e1e1e1;
+  height: 100%;
+  padding: 0;
+  overflow: hidden;
+}
+
+body {
+  color: black;
+  font-family: monospace;
+  font-size: 1rem;
+  line-height: 100%;
+}
+
+.container {
+  height: 100%;
+}
+
+.container .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #161e2c;
+  padding: 10px;
+  padding-top: 0;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.columns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.columns .left-column {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-flex: 1.5;
+      -ms-flex: 1.5;
+          flex: 1.5;
+}
+
+.columns .left-column label {
+  padding: 10px;
+}
+
+.columns .left-column img {
+  border: 1px solid #a50000;
+  outline: 2px solid black;
+  padding: 20px;
+  margin: auto 10px;
+  height: 480px;
+}
+
+.columns .right-column {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+input[type="submit"] {
+  display: none;
+}
+
+.icon {
+  padding: 0 6px;
+  height: 16px;
+  width: 16px;
+}
+
+.upload-button-label, .label {
+  padding: 10px 10px 0 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 20px;
+  text-transform: capitalize;
+}
+
+.upload-button-container, .submit, .log-file-name {
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.upload-button-container .button, .upload-button-container .log-file-nam, .submit .button, .submit .log-file-nam, .log-file-name .button, .log-file-name .log-file-nam {
+  border: 1px solid #a50000;
+  border-radius: 10px;
+  display: inline-block;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+.upload-button-container {
+  padding-bottom: 0px;
+}
+
+.log-file-name {
+  margin-bottom: -10px;
+  padding-bottom: 0px;
+}
+
+.submit .button {
+  margin-top: 10px;
+}
+
+.download-button {
+  color: black;
+}
+
+.control {
+  padding-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.result-table {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (auto)[4];
+      grid-template-columns: repeat(4, auto);
+}
+
+.result-table .box {
+  border-radius: 5px;
+  padding: 10px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.row {
+  font-size: 13px;
+  display: contents;
+}
+
+.row .c1 {
+  display: inline;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+}
+
+.row .c2 {
+  background-color: #285476;
+}
+
+#video-input, #model-input, #image-hide {
+  display: none;
+}
+/*# sourceMappingURL=style.css.map */
