@@ -25,7 +25,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About MetaBow-MediaPipe
 
-MetaBow Postural analysis aims to provide a computer vision based approach to assist violin learning. This project detects and tracks angles between key body points in real time. 
+MetaBow Postural analysis provides a computer-vision-based tool to assist violin learning. This project detects and tracks angles between key body points in real time. 
 
 
 ### Built With
