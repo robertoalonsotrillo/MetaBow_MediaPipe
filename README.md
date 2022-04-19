@@ -74,6 +74,7 @@ How to use the tool:
    ```
 2. Open browser
    Go to [localhost.com:5000](http://localhost.com:5000). You will find the following homepage:
+   
    ![HomePage](https://github.com/robertoalonsotrillo/MetaBow_MediaPipe/blob/main/github_readme_images/HomePage.JPG?raw=true)
    
 3. Inferencing 
@@ -81,6 +82,7 @@ How to use the tool:
    
    3.1. Uploading Video
         You can upload any video of violen player. Just ensure that the video is not old and is better quality like 720p or 480p.
+        
         ![Inferencing](https://github.com/robertoalonsotrillo/MetaBow_MediaPipe/blob/main/github_readme_images/inferencing.JPG?raw=true)
         
    3.2. Webcam
