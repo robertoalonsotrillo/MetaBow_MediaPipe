@@ -86,18 +86,21 @@ How to use the tool:
    
         You may use your webcam instead.
    
-   Inferencing contains two other options:
+   You will find two further inferencing options:
    
    A.   FileName TextBox
-        You add the filename in this box. The file refers to the json file which contains the information of the relevant angles of every frame.
+   
+        Add the filename for the json file containing the extracted angle data per frame.
         
    B.   Download Button
-        This button downloads the created json file. User can store it any where.
+   
+        This button downloads the created json file, allowing you to store it on any selected folder. 
         
    Inverencing provides you choice of two models:
    
    A.   Basic Posture
-        This model only concers with both elbows and shoulders
+   
+        A basic model analyzing elbow and shoulder angles.
    
    B.   Comprehensive Posture
         Along with Basic Posture, it covers multiple points of body which include, left thumb, index and pinky finger, left wrist and nose.
