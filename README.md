@@ -30,8 +30,6 @@ MetaBow Postural analysis provides a computer-vision-based tool to assist violin
 
 ### Built With
 
-The following software solutions have been used to develop this tool:
-
 * [Python 3.0](https://docs.python.org/3.0/)
 * [Mediapipe](https://google.github.io/mediapipe/)
 * [Flask](https://flask.palletsprojects.com/en/2.1.x/)
@@ -39,8 +37,6 @@ The following software solutions have been used to develop this tool:
 
 <!-- GETTING STARTED -->
 ## Getting Started
-
-In order to use the tool please follow these steps:
 
 ### Prerequisites
 
