@@ -79,9 +79,9 @@ How to use the tool:
    
 3. Inferencing 
    
-   There are 2 two approaches to infecerncing
+   There are 2 two approaches to inferencing
    
-   3.1. Uploading Video
+   3.1. Video Upload
    
         You may upload and analyze any video, just make sure that the quality is at least 480p for better results:  
         
