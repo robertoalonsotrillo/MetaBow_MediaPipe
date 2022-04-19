@@ -25,15 +25,12 @@
 <!-- ABOUT THE PROJECT -->
 ## About MetaBow-MediaPipe
 
-MetaBow aims to provide a computer vision based approach to assist the violinists to improve their techniques. This project aims to detect angles between key points of body.
-
-Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
+MetaBow Postural analysis aims to provide a computer vision based approach to assist violin learning. This project detects and tracks angles between key body points in real time. 
 
 
 ### Built With
 
-Following technologies are used to develop it.
+The following software solutions have been used to develop this tool:
 
 * [Python 3.0](https://docs.python.org/3.0/)
 * [Mediapipe](https://google.github.io/mediapipe/)
@@ -43,7 +40,7 @@ Following technologies are used to develop it.
 <!-- GETTING STARTED -->
 ## Getting Started
 
-Inorder to use the product. tou have to follow following steps.
+In order to use the tool please follow these steps:
 
 ### Prerequisites
 
