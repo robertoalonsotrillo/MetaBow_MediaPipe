@@ -68,8 +68,7 @@ How to use the tool:
    ```cmd
    python app.py
    ```
-2. Open browser
-   Go to [localhost.com:5000](http://localhost.com:5000). You will find the following homepage:
+2. Open the browser and go to [localhost.com:5000](http://localhost.com:5000). You will find the following homepage:
    
    ![HomePage](https://github.com/robertoalonsotrillo/MetaBow_MediaPipe/blob/main/github_readme_images/HomePage.JPG?raw=true)
    
