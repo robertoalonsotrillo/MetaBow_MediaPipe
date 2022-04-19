@@ -78,15 +78,18 @@ How to use the tool:
    ![HomePage](https://github.com/robertoalonsotrillo/MetaBow_MediaPipe/blob/main/github_readme_images/HomePage.JPG?raw=true)
    
 3. Inferencing 
-   There are 2 ways to have infecerncing
+   
+   There are 2 two approaches to infecerncing
    
    3.1. Uploading Video
-        You can upload any video of violen player. Just ensure that the video is not old and is better quality like 720p or 480p.
+   
+        You may upload and analyze any video, just make sure that the quality is at least 480p for better results:  
         
         ![Inferencing](https://github.com/robertoalonsotrillo/MetaBow_MediaPipe/blob/main/github_readme_images/inferencing.JPG?raw=true)
         
    3.2. Webcam
-        You can use webcam instead.
+   
+        You may use your webcam instead.
    
    Inferencing contains two other options:
    
