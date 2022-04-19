@@ -73,8 +73,7 @@ How to use the tool:
    python app.py
    ```
 2. Open browser
-   Goto [localhost.com:5000](http://localhost.com:5000)
-   You will see homepage like this
+   Go to [localhost.com:5000](http://localhost.com:5000). You will find the following homepage:
    ![HomePage](https://github.com/robertoalonsotrillo/MetaBow_MediaPipe/blob/main/github_readme_images/HomePage.JPG?raw=true)
    
 3. Inferencing 
