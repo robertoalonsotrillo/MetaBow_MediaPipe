@@ -104,7 +104,7 @@ How to use the tool:
    
    B.   Comprehensive Posture
    
-   A more comprehensiv approach including hand, wrist, and transversal angles. 
+   A more comprehensive approach including hand, wrist, and transversal angles. 
    
 4. Error page
 
