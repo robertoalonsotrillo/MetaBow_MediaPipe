@@ -90,23 +90,26 @@ How to use the tool:
    
    A.   FileName TextBox
    
-        Add the filename for the json file containing the extracted angle data per frame.
+   Add the filename for the json file containing the extracted angle data per frame.
         
    B.   Download Button
    
-        This button downloads the created json file, allowing you to store it on any selected folder. 
+   This button downloads the created json file, allowing you to store it on any selected folder. 
         
    Inverencing provides you choice of two models:
    
    A.   Basic Posture
    
-        A basic model analyzing elbow and shoulder angles.
+   A basic model analyzing elbow and shoulder angles.
    
    B.   Comprehensive Posture
-        Along with Basic Posture, it covers multiple points of body which include, left thumb, index and pinky finger, left wrist and nose.
-        
+   
+   A more comprehensiv approach including hand, wrist, and transversal angles. 
+   
 4. Error page
-   If user chose file inferencing, but doesn't upload file. He will be redirected to error page
+
+   If you select file inferencing but do not upload a file you will be redirected to the error page. 
+   
    ![ERROR](https://github.com/robertoalonsotrillo/MetaBow_MediaPipe/blob/main/github_readme_images/error.JPG?raw=true)
    
         
