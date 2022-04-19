@@ -80,7 +80,7 @@ How to use the tool:
    
    You may upload and analyze any video, just make sure that the quality is at least 480p for better results 
         
-        ![Inferencing](https://github.com/robertoalonsotrillo/MetaBow_MediaPipe/blob/main/github_readme_images/inferencing.JPG?raw=true)
+   ![Inferencing](https://github.com/robertoalonsotrillo/MetaBow_MediaPipe/blob/main/github_readme_images/inferencing.JPG?raw=true)
         
    3.2. Webcam
    
