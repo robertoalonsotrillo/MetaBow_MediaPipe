@@ -44,12 +44,11 @@ In order to use the tool please follow these steps:
 
 ### Prerequisites
 
-List things you need to use the software and how to install them.
-* python 3.7 at [https://www.python.org/downloads/windows/](https://www.python.org/downloads/windows/)
+* Python 3.7 at [https://www.python.org/downloads/windows/](https://www.python.org/downloads/windows/)
 
 ### Installation
 
-Below is an instruction of setting up your app.
+How to set up your app:
 
 1. Clone the repo
    ```cmd
@@ -67,9 +66,9 @@ Below is an instruction of setting up your app.
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Examples of how a project can be used. 
+How to use the tool: 
 
-1. Starting Server
+1. Start Server
    ```cmd
    python app.py
    ```
