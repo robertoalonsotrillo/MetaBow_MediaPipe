@@ -124,32 +124,36 @@ def update_values(RANGES):
         json.dump(data, json_file, indent=4)
 
 def calculate_angles(point,results,w,h):
-    x1=int(results.pose_landmarks.landmark[point[0]].x * w)
-    y1=int(results.pose_landmarks.landmark[point[0]].y * h)
-    x2=int(results.pose_landmarks.landmark[point[1]].x * w)
-    y2=int(results.pose_landmarks.landmark[point[1]].y * h)
-    x3=int(results.pose_landmarks.landmark[point[2]].x * w)
-    y3=int(results.pose_landmarks.landmark[point[2]].y * h)
+    try:
+        x1=int(results.pose_landmarks.landmark[point[0]].x * w)
+        y1=int(results.pose_landmarks.landmark[point[0]].y * h)
+        x2=int(results.pose_landmarks.landmark[point[1]].x * w)
+        y2=int(results.pose_landmarks.landmark[point[1]].y * h)
+        x3=int(results.pose_landmarks.landmark[point[2]].x * w)
+        y3=int(results.pose_landmarks.landmark[point[2]].y * h)
 
-    a = np.array([x1,y1])
-    b = np.array([x2,y2])
-    c = np.array([x3,y3])
+        a = np.array([x1,y1])
+        b = np.array([x2,y2])
+        c = np.array([x3,y3])
 
-    ba = a - b
-    bc = c - b
+        ba = a - b
+        bc = c - b
 
-    cosine_angle = np.dot(ba, bc) / (np.linalg.norm(ba) * np.linalg.norm(bc))
-    angle = np.arccos(cosine_angle)
+        cosine_angle = np.dot(ba, bc) / (np.linalg.norm(ba) * np.linalg.norm(bc))
+        angle = np.arccos(cosine_angle)
 
-    return(round(np.degrees(angle)))
-
+        return(round(np.degrees(angle)))
+    except:
+        return 0
 def draw_connections(image,point,results,w,h):
-    x1=int(results.pose_landmarks.landmark[point[0]].x * w)
-    y1=int(results.pose_landmarks.landmark[point[0]].y * h)
-    x2=int(results.pose_landmarks.landmark[point[1]].x * w)
-    y2=int(results.pose_landmarks.landmark[point[1]].y * h)
-    cv2.line(image,(x1,y1),(x2,y2),(0,0,255),2)
-
+    try:
+        x1=int(results.pose_landmarks.landmark[point[0]].x * w)
+        y1=int(results.pose_landmarks.landmark[point[0]].y * h)
+        x2=int(results.pose_landmarks.landmark[point[1]].x * w)
+        y2=int(results.pose_landmarks.landmark[point[1]].y * h)
+        cv2.line(image,(x1,y1),(x2,y2),(0,0,255),2)
+    except:
+        pass
 
 def detection():
 
@@ -330,7 +334,7 @@ def detection():
 def app(application):
     # detection()
     try:
-        application.run(debug=True)
+        application.run(debug=True, threaded=True)
 
     except Exception as e:
         print(e)

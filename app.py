@@ -16,8 +16,8 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 @app.route("/")
 def home():
-    if not (pythoncode.cap is None):
-        pythoncode.cap.release()
+    # if not (pythoncode.cap is None):
+    #     pythoncode.cap.release()
     return render_template("index.html")
 
 @app.route("/download")
@@ -77,7 +77,7 @@ def send():
 
     if request.method == "GET":
         print("accessed via get")
-        return render_template("index.html")
+        return redirect('/')
 
-if __name__ == "__main__": 
+if __name__ == "__main__":
     pythoncode.app(app)
