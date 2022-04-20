@@ -41,6 +41,7 @@ import cv2
 import json
 import re
 import log_structure
+import os
 
 mp_pose = mp.solutions.pose
 
@@ -50,21 +51,22 @@ logfilename=""
 filename=""
 outputFrame=None
 lock=None
-filepath=r"static/uploads/"
+filepath=os.path.join("static","uploads")
 cap=None
+logFiledata=""
 
 def updateJsonLog(RANGES):
     global MODEL,logfilename,filename
-    path= "json_log/model1/" if MODEL=="first" else "json_log/model2/"
+    path= os.path.join("json_log","model1","") if MODEL=="first" else os.path.join("json_log","model2","")
     filename=path+logfilename
-    data = log_structure.Model1 if MODEL=="first" else log_structure.Model2
-    for key,range_key in zip(data,RANGES):
-        data[key]['angle'].append(range_key['angle'])
-        data[key]['max']=range_key['max']
-        data[key]['min']=range_key['min']
+    logFiledata = log_structure.Model1 if MODEL=="first" else log_structure.Model2
+    for key,range_key in zip(logFiledata,RANGES):
+        logFiledata[key]['angle'].append(range_key['angle'])
+        logFiledata[key]['max']=range_key['max']
+        logFiledata[key]['min']=range_key['min']
 
     with open(filename, "w") as json_file:
-        json.dump(data, json_file, indent=4)
+        json.dump(logFiledata, json_file, indent=4)
 def generate():
     # print("generate called")
     # grab global references to the output frame and lock variables
@@ -99,7 +101,7 @@ def updateVariable(_MODEL,_VIDEOINPUT,filename,_logFileName):
     if VIDEOINPUT=="web-cam":
         filepath=0
     else:
-        filepath="static/uploads/" + str(filename)
+        filepath=os.path.join("static","uploads",str(filename))
     MODEL=_MODEL
 
 def modify_ranges(angles,RANGES):
@@ -111,14 +113,14 @@ def modify_ranges(angles,RANGES):
 
 def update_values(RANGES):
 
-    with open(r"templates/var.json", "r") as json_file:
+    with open(os.path.join("templates","var.json"), "r") as json_file:
         data = json.load(json_file)
         for key,range_key in zip(data,RANGES):
             data[key]['angle']=range_key['angle']
             data[key]['max']=range_key['max']
             data[key]['min']=range_key['min']
 
-    with open(r"templates/var.json", "w") as json_file:
+    with open(os.path.join("templates","var.json"), "w") as json_file:
         json.dump(data, json_file, indent=4)
 
 def calculate_angles(point,results,w,h):

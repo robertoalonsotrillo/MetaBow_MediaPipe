@@ -10,7 +10,7 @@ from werkzeug.utils import secure_filename
 
 
 app = Flask(__name__)
-UPLOAD_FOLDER = 'static/uploads/'
+UPLOAD_FOLDER = path=os.path.join("static","uploads")
 app.secret_key = "secret key"
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
