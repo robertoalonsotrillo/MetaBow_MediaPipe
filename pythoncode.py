@@ -50,12 +50,12 @@ logfilename=""
 filename=""
 outputFrame=None
 lock=None
-filepath=r"static\uploads\\"
+filepath=r"static/uploads/"
 cap=None
 
 def updateJsonLog(RANGES):
     global MODEL,logfilename,filename
-    path= "json_log\\model1\\" if MODEL=="first" else "json_log\\model2\\"
+    path= "json_log/model1/" if MODEL=="first" else "json_log/model2/"
     filename=path+logfilename
     data = log_structure.Model1 if MODEL=="first" else log_structure.Model2
     for key,range_key in zip(data,RANGES):
@@ -86,7 +86,7 @@ def generate():
             continue
         # yield the output frame in the byte format
         yield(b'--frame\r\n' b'Content-Type: image/jpeg\r\n\r\n' +
-              bytearray(encodedImage) + b'\r\n') 
+              bytearray(encodedImage) + b'\r\n')
 
 def updateVariable(_MODEL,_VIDEOINPUT,filename,_logFileName):
 
@@ -99,7 +99,7 @@ def updateVariable(_MODEL,_VIDEOINPUT,filename,_logFileName):
     if VIDEOINPUT=="web-cam":
         filepath=0
     else:
-        filepath="static\\uploads\\" + str(filename)
+        filepath="static/uploads/" + str(filename)
     MODEL=_MODEL
 
 def modify_ranges(angles,RANGES):
@@ -111,14 +111,14 @@ def modify_ranges(angles,RANGES):
 
 def update_values(RANGES):
 
-    with open(r"templates\var.json", "r") as json_file:
+    with open(r"templates/var.json", "r") as json_file:
         data = json.load(json_file)
         for key,range_key in zip(data,RANGES):
             data[key]['angle']=range_key['angle']
             data[key]['max']=range_key['max']
             data[key]['min']=range_key['min']
 
-    with open(r"templates\var.json", "w") as json_file:
+    with open(r"templates/var.json", "w") as json_file:
         json.dump(data, json_file, indent=4)
 
 def calculate_angles(point,results,w,h):
@@ -138,7 +138,7 @@ def calculate_angles(point,results,w,h):
 
     cosine_angle = np.dot(ba, bc) / (np.linalg.norm(ba) * np.linalg.norm(bc))
     angle = np.arccos(cosine_angle)
-    
+
     return(round(np.degrees(angle)))
 
 def draw_connections(image,point,results,w,h):
@@ -169,7 +169,7 @@ def detection():
     POSE_CONNECTIONS_SECOND = [(13,11),(11,23),(12,14),(14,16),(24,12),(11,12),(13,15),(15,19),(15,17),(15,21)]
     POSE_ANGLES_FIRST=        [(15,13,11),(13,11,12),(14,12,11),(12,14,16)]
     POSE_ANGLES_SECOND=       [(15,13,11),(13,11,12),(14,12,11),(12,14,16),(13,11,23),(14,12,24),(15,11,0),(16,12,0),(13,15,19),(13,15,17),(13,15,21)]
-     
+
     FRAME_COUNT=0
     LEFT_ELBOW={
         "name": "LEFT_ELBOW",
@@ -194,8 +194,8 @@ def detection():
         "angle":0,
         "min":0,
         "max":0
-    }  
-    
+    }
+
     LEFT_SHOULDER_HIP={
         "name": "LEFT_SHOULDER_HIP",
         "angle":0,
@@ -258,7 +258,7 @@ def detection():
 
                     # If loading a video, use 'break' instead of 'continue'.
                     break
-                
+
                 (h,w)=image.shape[:2]
                 # To improve performance, optionally mark the image as not writeable to
                 # pass by reference.
@@ -276,7 +276,7 @@ def detection():
                         for point in POSE_CONNECTIONS_FIRST:
                             # print(point)
                             draw_connections(image,point,results,w,h)
-                            
+
                     else:
                         # print("right")
                         for point in POSE_CONNECTIONS_SECOND:
@@ -310,9 +310,9 @@ def detection():
                 update_values(RANGES)
                 updateJsonLog(RANGES)
 
-                
 
-                
+
+
                 # Flip the image horizontally for a selfie-view display.
                 new_frame_time = time()
                 fps = 1/(new_frame_time-prev_frame_time)
@@ -329,6 +329,6 @@ def app(application):
     # detection()
     try:
         application.run(debug=True)
-        
+
     except Exception as e:
         print(e)

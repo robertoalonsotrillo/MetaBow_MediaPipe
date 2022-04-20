@@ -1,23 +1,23 @@
 {
     "LEFT_ELBOW": {
-        "angle": 24,
-        "min": 1,
-        "max": 165
+        "angle": 70,
+        "min": 55,
+        "max": 86
     },
     "LEFT_SHOULDER": {
-        "angle": 124,
-        "min": 101,
-        "max": 168
+        "angle": 123,
+        "min": 111,
+        "max": 129
     },
     "RIGHT_SHOULDER": {
-        "angle": 124,
-        "min": 39,
-        "max": 179
+        "angle": 125,
+        "min": 123,
+        "max": 138
     },
     "RIGHT_ELBOW": {
-        "angle": 154,
-        "min": 22,
-        "max": 173
+        "angle": 27,
+        "min": 23,
+        "max": 115
     },
     "LEFT_SHOULDER_HIP": {
         "angle": 41,
