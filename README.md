@@ -17,10 +17,6 @@
     </li>
     <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
 
@@ -29,15 +25,10 @@
 <!-- ABOUT THE PROJECT -->
 ## About MetaBow-MediaPipe
 
-MetaBow aims to provide a computer vision based approach to assist the violinists to improve their techniques. This project aims to detect angles between key points of body.
-
-Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
+MetaBow Postural analysis provides a computer-vision-based tool to assist violin learning. This project detects and tracks angles between key body points in real time. 
 
 
 ### Built With
-
-Following technologies are used to develop it.
 
 * [Python 3.0](https://docs.python.org/3.0/)
 * [Mediapipe](https://google.github.io/mediapipe/)
@@ -47,16 +38,59 @@ Following technologies are used to develop it.
 <!-- GETTING STARTED -->
 ## Getting Started
 
-Inorder to use the product. tou have to follow following steps.
-
 ### Prerequisites
 
-List things you need to use the software and how to install them.
-* python 3.7 at [https://www.python.org/downloads/windows/](https://www.python.org/downloads/windows/)
+* Python 3.7 at [https://www.python.org/downloads/windows/](https://www.python.org/downloads/windows/)
+* MiniConda 3.7 at [https://docs.conda.io/en/latest/miniconda.html](https://docs.conda.io/en/latest/miniconda.html)
+* Pip at [https://pypi.org/project/pip/](https://pypi.org/project/pip/)
 
+MOVE TO INSTALLATION IF YOU ALREADY HAVE CONDA INSTALLED IN YOUR SYSTEM
+
+You can follow this detailed link [https://developers.google.com/earth-engine/guides/python_install-conda#mac](https://developers.google.com/earth-engine/guides/python_install-conda#mac)  to install on MAC too
+
+1. Download the Miniconda installer to your Home directory. Add commands in terminal.
+   ```sh
+   curl https://repo.anaconda.com/miniconda/Miniconda3-py37_4.11.0-MacOSX-x86_64.sh -o ~/miniconda.sh
+   ```
+2. Install Miniconda quietly, accepting defaults, to your Home directory.
+   ```sh
+   bash ~/miniconda.sh -b -p
+   ```
+3. Remove the Miniconda installer from your Home directory.
+   ```sh
+   rm ~/miniconda.sh
+   ```
+4. Test Miniconda install
+   ```sh
+   source $HOME/miniconda3/bin/activate
+   conda --help
+   ```
+   You will be able to see help regarding conda, if command is not found. Then you have made any mistake. 
+   
+5. Restart Terminal
+
+6. Adding Conda to Path
+   ```sh
+   printf '\n# add path to conda\nexport PATH="$HOME/miniconda3/bin:$PATH"\n' >> ~/.bashrc
+   ```
+7. Restart open command line interfaces for environmental variable changes to take effect.
+
+8. Create Enviornment
+   The environment benifits in the way that it separates certain files from main system. For Example, if ceratin file needs python 2.7, you can create environment to      separate it from main python. So your main python version stays untouched.
+   
+   you can add any name you want inplace of "metabow". 
+   ```sh
+   conda create --name "metabow"
+   ```
+9. Activate Enviornment
+   replace "metabow" with name of environment you created
+   ```sh
+   conda activate "metabow"
+   ``` 
+ 
 ### Installation
 
-_Below is an instruction of setting up your app.
+How to set up your app:
 
 1. Clone the repo
    ```cmd
@@ -66,107 +100,80 @@ _Below is an instruction of setting up your app.
    ```cmd
    cd MetaBow_MediaPipe
    ```
-3. Install Requirements
+4. Activate Enviornment
+   replace "metabow" with name of environment you created
    ```sh
+   conda activate "metabow"
+   ```
+5. Install Requirements
+   Make Sure Environment is activated before running it
+   ```cmd
    pip install -r requirement.txt
    ```
 
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+How to use the tool: 
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+1. Start Server
+   Make Sure Environment is activated before running it
+   ```cmd
+   python app.py
+   ```
+2. Open the browser and go to [localhost.com:5000](http://localhost.com:5000):
+   
+   ![HomePage](https://github.com/robertoalonsotrillo/MetaBow_MediaPipe/blob/main/github_readme_images/HomePage.JPG?raw=true)
+   
+3. Inferencing 
+   
+   There are 2 two approaches to inferencing
+   
+   3.1. Video Upload
+   
+   You may upload and analyze any video, just make sure that the quality is at least 480p for better results 
+        
+   ![Inferencing](https://github.com/robertoalonsotrillo/MetaBow_MediaPipe/blob/main/github_readme_images/inferencing.JPG?raw=true)
+        
+   3.2. Webcam
+   
+        You may use your webcam instead.
+   
+   You will find two further inferencing options:
+   
+   A.   FileName TextBox
+   
+   Add the filename for the json file containing the extracted angle data per frame.
+        
+   B.   Download Button
+   
+   This button downloads the created json file, allowing you to store it on any selected folder. 
+        
+   Inverencing provides you choice of two models:
+   
+   A.   Basic Posture
+   
+   A basic model analyzing elbow and shoulder angles.
+   
+   B.   Comprehensive Posture
+   
+   A more comprehensive approach including hand, wrist, and transversal angles. 
+   
+4. Error page
 
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
+   If you select file inferencing but do not upload a file you will be redirected to the error page. 
+   
+   ![ERROR](https://github.com/robertoalonsotrillo/MetaBow_MediaPipe/blob/main/github_readme_images/error.JPG?raw=true)
+   
+        
 <!-- ROADMAP -->
 ## Roadmap
 
-- [x] Add Changelog
-- [x] Add back to top links
-- [ ] Add Additional Templates w/ Examples
-- [ ] Add "components" document to easily copy & paste sections of the readme
-- [ ] Multi-language Support
-    - [ ] Chinese
-    - [ ] Spanish
-
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues).
-
-<p align="right">(<a href="#top">back to top</a>)</p>
+- [x] Detect Pose and calculate angles
+- [ ] Detect Bow and Violen
+- [ ] Find Apropiate angles i.e. recommended ranges
+- [ ] Multi-Reports support
+    - [x] JSON
+    - [ ] BVH
 
 
-
-<!-- CONTRIBUTING -->
-## Contributing
-
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-<!-- LICENSE -->
-## License
-
-Distributed under the MIT License. See `LICENSE.txt` for more information.
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-<!-- CONTACT -->
-## Contact
-
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
-
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-<!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
-
-Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
-
-* [Choose an Open Source License](https://choosealicense.com)
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-* [Malven's Flexbox Cheatsheet](https://flexbox.malven.co/)
-* [Malven's Grid Cheatsheet](https://grid.malven.co/)
-* [Img Shields](https://shields.io)
-* [GitHub Pages](https://pages.github.com)
-* [Font Awesome](https://fontawesome.com)
-* [React Icons](https://react-icons.github.io/react-icons/search)
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
-[contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
-[forks-url]: https://github.com/othneildrew/Best-README-Template/network/members
-[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
-[stars-url]: https://github.com/othneildrew/Best-README-Template/stargazers
-[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
-[issues-url]: https://github.com/othneildrew/Best-README-Template/issues
-[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
-[license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/othneildrew
-[product-screenshot]: images/screenshot.png
