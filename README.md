@@ -69,7 +69,7 @@ You can follow this detailed link [https://developers.google.com/earth-engine/gu
    
 5. Restart Terminal
 
-6. Adding Conda To Path
+6. Adding Conda to Path
    ```sh
    printf '\n# add path to conda\nexport PATH="$HOME/miniconda3/bin:$PATH"\n' >> ~/.bashrc
    ```
