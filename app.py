@@ -1,8 +1,8 @@
 import os
 import pythoncode
 import json
-
-from flask import Response, jsonify, url_for
+from flask_cors import CORS, cross_origin
+from flask import Response, jsonify
 from flask import Flask, request
 from flask import render_template,redirect
 from werkzeug.utils import secure_filename
@@ -10,14 +10,16 @@ from werkzeug.utils import secure_filename
 
 
 app = Flask(__name__)
+cors = CORS(app)
 UPLOAD_FOLDER = path=os.path.join("static","uploads")
 app.secret_key = "secret key"
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+app.config['CORS_HEADERS'] = 'Content-Type'
 
 @app.route("/")
 def home():
-    # if not (pythoncode.cap is None):
-    #     pythoncode.cap.release()
+    if not (pythoncode.cap is None):
+        pythoncode.cap.release()
     return render_template("index.html")
 
 @app.route("/download")
@@ -44,6 +46,7 @@ def video_feed_detection():
     return render_template("index.html")
                     
 @app.route("/read")
+@cross_origin()
 def read():
     return render_template("var.json")
 

@@ -324,9 +324,10 @@ def detection():
                 fps = 1/(new_frame_time-prev_frame_time)
                 prev_frame_time = new_frame_time
 
-                # cv2.putText(image, "{}".format(round(fps)), (30, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (100, 255, 0), 1, cv2.LINE_AA)
+                # cv2.putText(image, "{}".format(round(fps,2)), (30, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (100, 255, 0), 1, cv2.LINE_AA)
 
                 image=cv2.resize(image,(640,480))
+                cv2.putText(image, "{}".format(round(fps,2)), (30, 30), cv2.FONT_HERSHEY_SIMPLEX, 1.5, (0, 0, 255), 3, cv2.LINE_AA)
                 outputFrame = image.copy()
         except Exception as e:
             print(e)
