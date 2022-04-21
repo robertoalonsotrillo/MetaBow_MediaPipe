@@ -126,12 +126,12 @@ How to use the tool:
    source ~/miniconda3/bin/activate
    ```
    
-   ```cmd
-   activate metabow
+   ```sh
+   conda activate metabow
    ```
 3. Start Server
    Make Sure Environment is activated before running it. It will shhow environment name in start as (metabow)
-   ```cmd
+   ```sh
    python app.py
    ```
 4. Open the browser and go to [localhost.com:5000](http://localhost.com:5000):
