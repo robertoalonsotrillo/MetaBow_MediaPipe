@@ -122,7 +122,7 @@ How to use the tool:
    ```
 
 2. Activate Environment
-   ```cmd
+   ```sh
    source ~/miniconda3/bin/activate
    ```
    
