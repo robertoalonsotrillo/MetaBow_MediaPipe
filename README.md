@@ -116,16 +116,29 @@ How to set up your app:
 
 How to use the tool: 
 
-1. Start Server
-   Make Sure Environment is activated before running it
+1. open terminal in your code folder
+   ```cmd
+   cd PATH/to/your/folder
+   ```
+
+2. Activate Environment
+   ```cmd
+   source ~/miniconda3/bin/activate
+   ```
+   
+   ```cmd
+   activate metabow
+   ```
+3. Start Server
+   Make Sure Environment is activated before running it. It will shhow environment name in start as (metabow)
    ```cmd
    python app.py
    ```
-2. Open the browser and go to [localhost.com:5000](http://localhost.com:5000):
+4. Open the browser and go to [localhost.com:5000](http://localhost.com:5000):
    
    ![HomePage](https://github.com/robertoalonsotrillo/MetaBow_MediaPipe/blob/main/github_readme_images/HomePage.JPG?raw=true)
    
-3. Inferencing 
+4. Inferencing 
    
    There are 2 two approaches to inferencing
    
@@ -159,7 +172,7 @@ How to use the tool:
    
    A more comprehensive approach including hand, wrist, and transversal angles. 
    
-4. Error page
+5. Error page
 
    If you select file inferencing but do not upload a file you will be redirected to the error page. 
    
