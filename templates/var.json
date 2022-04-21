@@ -1,57 +1,57 @@
 {
     "LEFT_ELBOW": {
         "angle": 60,
-        "min": 55,
+        "min": 60,
         "max": 86
     },
     "LEFT_SHOULDER": {
-        "angle": 111,
-        "min": 109,
-        "max": 133
+        "angle": 116,
+        "min": 113,
+        "max": 129
     },
     "RIGHT_SHOULDER": {
-        "angle": 125,
-        "min": 119,
-        "max": 139
+        "angle": 134,
+        "min": 123,
+        "max": 138
     },
     "RIGHT_ELBOW": {
-        "angle": 55,
-        "min": 17,
-        "max": 139
+        "angle": 93,
+        "min": 26,
+        "max": 115
     },
     "LEFT_SHOULDER_HIP": {
-        "angle": 37,
-        "min": 29,
-        "max": 44
+        "angle": 47,
+        "min": 0,
+        "max": 175
     },
     "RIGHT_SHOULDER_HIP": {
-        "angle": 51,
-        "min": 37,
-        "max": 55
-    },
-    "LEFT_HAND_FACE": {
-        "angle": 124,
-        "min": 118,
-        "max": 134
-    },
-    "RIGHT_HAND_FACE": {
-        "angle": 102,
-        "min": 56,
+        "angle": 33,
+        "min": 0,
         "max": 164
     },
+    "LEFT_HAND_FACE": {
+        "angle": 162,
+        "min": 0,
+        "max": 177
+    },
+    "RIGHT_HAND_FACE": {
+        "angle": 145,
+        "min": 0,
+        "max": 178
+    },
     "LEFT_WRIST_INDEX": {
-        "angle": 177,
-        "min": 168,
-        "max": 180
+        "angle": 171,
+        "min": 0,
+        "max": 179
     },
     "LEFT_WRIST_PINKY": {
-        "angle": 149,
-        "min": 143,
-        "max": 161
+        "angle": 155,
+        "min": 0,
+        "max": 180
     },
     "LEFT_WRIST_THUMB": {
-        "angle": 154,
-        "min": 146,
-        "max": 163
+        "angle": 177,
+        "min": 0,
+        "max": 180
     }
 }
