@@ -73,7 +73,7 @@ For MacOS users please follow this detailed installation process [https://develo
    ```sh
    printf '\n# add path to conda\nexport PATH="$HOME/miniconda3/bin:$PATH"\n' >> ~/.bashrc
    ```
-7. Restart open command line interfaces for environmental variable changes to take effect.
+7. Restart open command line interface for environmental variable changes to take effect.
 
 8. Create Enviornment. The environment separates certain files from the system. For example, if a file needs Python 2.7, you can create an environment to run it independetly of your current installed Python version. 
    
