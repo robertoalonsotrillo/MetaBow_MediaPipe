@@ -52,15 +52,15 @@ For MacOS users please follow this detailed installation process [https://develo
    ```sh
    curl https://repo.anaconda.com/miniconda/Miniconda3-py37_4.11.0-MacOSX-x86_64.sh -o ~/miniconda.sh
    ```
-2. Install Miniconda quietly, accepting defaults, to your Home directory.
+2. Install Miniconda quietly, accepting defaults, to your Home directory:
    ```sh
    bash ~/miniconda.sh -b -p
    ```
-3. Remove Miniconda installer from your Home directory.
+3. Remove Miniconda installer from your Home directory:
    ```sh
    rm ~/miniconda.sh
    ```
-4. Test Miniconda install
+4. Test Miniconda install:
    ```sh
    source $HOME/miniconda3/bin/activate
    conda --help
