@@ -69,7 +69,7 @@ For MacOS users please follow this detailed installation process [https://develo
    
 5. Restart Terminal
 
-6. Adding Conda to Path
+6. Add Conda to path
    ```sh
    printf '\n# add path to conda\nexport PATH="$HOME/miniconda3/bin:$PATH"\n' >> ~/.bashrc
    ```
