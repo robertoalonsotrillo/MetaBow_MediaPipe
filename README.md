@@ -48,7 +48,7 @@ MOVE TO INSTALLATION IF YOU ALREADY HAVE CONDA INSTALLED IN YOUR SYSTEM
 
 For MacOS users please follow this detailed installation process [https://developers.google.com/earth-engine/guides/python_install-conda#mac](https://developers.google.com/earth-engine/guides/python_install-conda#mac)
 
-1. Download Miniconda installer to your Home directory and add the following commands in the terminal:
+1. Download Miniconda installer to your Home directory and run the following terminal commands:
    ```sh
    curl https://repo.anaconda.com/miniconda/Miniconda3-py37_4.11.0-MacOSX-x86_64.sh -o ~/miniconda.sh
    ```
