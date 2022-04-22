@@ -75,7 +75,7 @@ For MacOS users please follow this detailed installation process [https://develo
    ```
 7. Restart open command line interfaces for environmental variable changes to take effect.
 
-8. Create Enviornment. The environment separates certain files from the system. For example, if a file needs python 2.7, you can create an environment to run it independetly of your current installed python version. 
+8. Create Enviornment. The environment separates certain files from the system. For example, if a file needs Python 2.7, you can create an environment to run it independetly of your current installed Python version. 
    
   you may replace "metabow" with any other term
    ```sh
