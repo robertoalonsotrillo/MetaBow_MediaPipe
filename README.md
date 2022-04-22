@@ -105,13 +105,13 @@ How to set up your app:
    ```
 4. Activate Enviornment
 
-   replace "metabow" with name of environment you created
+   replace "metabow" with the name of environment you've created
    ```sh
    conda activate "metabow"
    ```
 5. Install Requirements
 
-   Make Sure Environment is activated before running it
+   Make sure that the environment is activated before running it
    ```cmd
    pip install -r requirement.txt
    ```
@@ -126,7 +126,7 @@ How to use the tool:
    cd PATH/to/your/folder
    ```
 
-2. Activate Environment
+2. Activate the environment
    ```sh
    source ~/miniconda3/bin/activate
    ```
@@ -135,7 +135,8 @@ How to use the tool:
    conda activate metabow
    ```
 3. Start Server
-   Make Sure Environment is activated before running it. It will shhow environment name in start as (metabow)
+   Make sure that the environment is activated before running it. The new terminal command will now start with (enviroment's name).
+   
    ```sh
    python app.py
    ```
@@ -145,7 +146,7 @@ How to use the tool:
    
 4. Inferencing 
    
-   There are 2 two approaches to inferencing
+   There are two approaches to inferencing
    
    3.1. Video Upload
    
