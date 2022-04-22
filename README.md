@@ -94,19 +94,23 @@ For MacOS users please follow this detailed installation process [https://develo
 How to set up your app:
 
 1. Clone the repo
+
    ```cmd
    git clone https://github.com/robertoalonsotrillo/MetaBow_MediaPipe.git
    ```
 2. Change your terminal path to repo folder
+
    ```cmd
    cd MetaBow_MediaPipe
    ```
 4. Activate Enviornment
+
    replace "metabow" with name of environment you created
    ```sh
    conda activate "metabow"
    ```
 5. Install Requirements
+
    Make Sure Environment is activated before running it
    ```cmd
    pip install -r requirement.txt
