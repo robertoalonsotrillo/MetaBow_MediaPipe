@@ -82,7 +82,7 @@ For MacOS users please follow this detailed installation process [https://develo
    ```sh
    conda create --name "metabow"
    ```
-9. Activate enviornment
+9. Activate environment
    
    ```sh
    conda activate "metabow"
