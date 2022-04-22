@@ -75,10 +75,11 @@ For MacOS users please follow this detailed installation process [https://develo
    ```
 7. Restart open command line interfaces for environmental variable changes to take effect.
 
-8. Create Enviornment
-   The environment benifits in the way that it separates certain files from main system. For Example, if ceratin file needs python 2.7, you can create environment to      separate it from main python. So your main python version stays untouched.
+8. Create Enviornment.
+
+   The environment separates certain files from the main system. For example, if ceratin file needs python 2.7, you can create an environment to      separate it from your current installed python.
    
-   you can add any name you want inplace of "metabow". 
+  you may replace "metabow" with any other term
    ```sh
    conda create --name "metabow"
    ```
@@ -162,7 +163,7 @@ How to use the tool:
    
    This button downloads the created json file, allowing you to store it on any selected folder. 
         
-   Inverencing provides you choice of two models:
+   Inferencing provides you choice of two models:
    
    A.   Basic Posture
    
