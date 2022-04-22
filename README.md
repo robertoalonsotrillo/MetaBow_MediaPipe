@@ -46,9 +46,9 @@ MetaBow Postural analysis provides a computer-vision-based tool to assist violin
 
 MOVE TO INSTALLATION IF YOU ALREADY HAVE CONDA INSTALLED IN YOUR SYSTEM
 
-You can follow this detailed link [https://developers.google.com/earth-engine/guides/python_install-conda#mac](https://developers.google.com/earth-engine/guides/python_install-conda#mac)  to install on MAC too
+For MacOS users please follow this detailed installation process [https://developers.google.com/earth-engine/guides/python_install-conda#mac](https://developers.google.com/earth-engine/guides/python_install-conda#mac)
 
-1. Download the Miniconda installer to your Home directory. Add commands in terminal.
+1. Download Miniconda installer to your Home directory and add the following commands in the terminal:
    ```sh
    curl https://repo.anaconda.com/miniconda/Miniconda3-py37_4.11.0-MacOSX-x86_64.sh -o ~/miniconda.sh
    ```
@@ -56,7 +56,7 @@ You can follow this detailed link [https://developers.google.com/earth-engine/gu
    ```sh
    bash ~/miniconda.sh -b -p
    ```
-3. Remove the Miniconda installer from your Home directory.
+3. Remove Miniconda installer from your Home directory.
    ```sh
    rm ~/miniconda.sh
    ```
@@ -65,7 +65,7 @@ You can follow this detailed link [https://developers.google.com/earth-engine/gu
    source $HOME/miniconda3/bin/activate
    conda --help
    ```
-   You will be able to see help regarding conda, if command is not found. Then you have made any mistake. 
+   You should get conda's help text, if "command is not found" then the installation has not been successful. 
    
 5. Restart Terminal
 
