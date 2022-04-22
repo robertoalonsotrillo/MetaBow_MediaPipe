@@ -77,12 +77,14 @@ For MacOS users please follow this detailed installation process [https://develo
 
 8. Create Enviornment. The environment separates certain files from the system. For example, if a file needs Python 2.7, you can create an environment to run it independetly of your current installed Python version. 
    
-  you may replace "metabow" with any other term
+   you may replace "metabow" with any other term
+   
    ```sh
    conda create --name "metabow"
    ```
 9. Activate Enviornment
    replace "metabow" with name of environment you created
+   
    ```sh
    conda activate "metabow"
    ``` 
