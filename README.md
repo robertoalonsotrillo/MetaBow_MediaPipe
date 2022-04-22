@@ -132,7 +132,7 @@ How to use the tool:
    ```sh
    conda activate metabow
    ```
-3. Start the server and make sure that the environment is activated before running it. The new terminal command will now start with (environment's name).
+3. Start the server and make sure that the environment is activated before running it. The new terminal line will now start with (environment's name).
    
    ```sh
    python app.py
