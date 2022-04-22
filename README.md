@@ -103,9 +103,8 @@ How to set up your app:
    ```cmd
    cd MetaBow_MediaPipe
    ```
-4. Activate Enviornment
+4. Activate enviornment
 
-   replace "metabow" with the name of environment you've created
    ```sh
    conda activate "metabow"
    ```
