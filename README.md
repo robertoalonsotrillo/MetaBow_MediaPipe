@@ -44,7 +44,7 @@ MetaBow Postural analysis provides a computer-vision-based tool to assist violin
 * MiniConda 3.7 at [https://docs.conda.io/en/latest/miniconda.html](https://docs.conda.io/en/latest/miniconda.html)
 * Pip at [https://pypi.org/project/pip/](https://pypi.org/project/pip/)
 
-MOVE TO INSTALLATION IF YOU ALREADY HAVE CONDA INSTALLED IN YOUR SYSTEM
+#### Move to installation if already have Conda in your system
 
 For MacOS users please follow this detailed installation process [https://developers.google.com/earth-engine/guides/python_install-conda#mac](https://developers.google.com/earth-engine/guides/python_install-conda#mac)
 
