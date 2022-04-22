@@ -165,7 +165,7 @@ How to use the tool:
    
    This button downloads the created json file, allowing you to store it on any selected folder. 
         
-   Inferencing provides you choice of two models:
+   You may choose between two inferencing models:
    
    A.   Basic Posture
    
