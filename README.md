@@ -119,7 +119,7 @@ How to set up your app:
 
 How to use the tool: 
 
-1. Open terminal in your code folder
+1. Open your code folder in the terminal
    ```cmd
    cd PATH/to/your/folder
    ```
@@ -132,8 +132,7 @@ How to use the tool:
    ```sh
    conda activate metabow
    ```
-3. Start server
-   Make sure that the environment is activated before running it. The new terminal command will now start with (enviroment's name).
+3. Start the server and make sure that the environment is activated before running it. The new terminal command will now start with (enviroment's name).
    
    ```sh
    python app.py
